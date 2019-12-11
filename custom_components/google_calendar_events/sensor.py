@@ -1,17 +1,15 @@
 import dateparser
 from datetime import timedelta
 from requests import get
-import requests
 import json
 import datetime
 import logging
 import voluptuous as vol
-from time import sleep
+
 from homeassistant.helpers.entity import Entity
 import homeassistant.helpers.config_validation as cv
-from homeassistant.helpers.entity_component import EntityComponent
 from homeassistant.components.sensor import (PLATFORM_SCHEMA)
-from homeassistant.components.calendar import GoogleCalendarEventDevice
+
 
 __version__ = '0.1.3'
 
@@ -30,8 +28,8 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 })
 
 
-async def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
-    async_add_devices([GoogleCalendarEventsSensor(hass, config)])
+def setup_platform(hass, config, add_devices, discovery_info=None):
+    add_devices([GoogleCalendarEventsSensor(hass, config)])
 
 
 class CalendarEvent:
@@ -48,10 +46,16 @@ class CalendarEvent:
         self._location = _location
         self._htmlLink = _htmlLink
 
+
+class Object:
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__,
+                          sort_keys=True)
+
+
 class GoogleCalendarEventsSensor(Entity):
     def __init__(self, hass, config):
         self.hass = hass
-        self.config = config
         self._name = config[CONF_NAME]
         self._calendarID = config[CONF_CALENDAR]
         # _LOGGER.error(config[CONF_CALENDAR])
@@ -59,12 +63,9 @@ class GoogleCalendarEventsSensor(Entity):
         self._state = None
         self._calendar = []
         self._events = 0
-        self.component = loader.get_component(hass, "calendar")
-    async def async_added_to_hass(self):
-        await self.init()
-    async def init(self):
-        await self.async_update(self.hass, self.config)
-    async def async_update(self, hass, config):
+        self.update(config)
+
+    def update(self, config):
         self._events = 0
         current_date = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc,
                                                           hour=0, minute=0, second=0, microsecond=0).isoformat()
@@ -75,24 +76,18 @@ class GoogleCalendarEventsSensor(Entity):
         start_date = start_date[:-6] + "Z"
         end_date = end_date[:-6] + "Z"
         self._calendar = []
-        for cal in self._calendarID:         
+        for cal in self._calendarID:
             _LOGGER.error(cal['id'])
-            sleep(20)
             url = f'http://localhost:8123/api/calendars/calendar.{cal["id"]}?start={start_date}&end={end_date}'
+            # _LOGGER.error(url)
             headers = {
-                'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIwZjYyMTg2MjNhZWI0MTEyODI3ZmIyMjE3YzU3ZjU0MyIsImlhdCI6MTU3NTk4NTI0MywiZXhwIjoxODkxMzQ1MjQzfQ.Supw2hjTHoKp6Gj-E7-D5zIf5mzwziKI7ln3digWL0U',
+                'Authorization': 'Bearer *************',
                 'content-type': 'application/json',
-                'charset': 'utf-8',
-                'User-Agent': 'component'
+                'charset': 'utf-8'
             }
-            try:
-                response = get(url, headers=headers)
-                response.raise_for_status()
-            except requests.exceptions.HTTPError as err:
-                _LOGGER.error(err)
+            response = get(url, headers=headers)
             _LOGGER.error(response.text)
             data = json.loads(response.text)
-            sleep(2)
             for x in data:
                 _LOGGER.error("Ddata")
                 _LOGGER.error(x)
@@ -148,6 +143,3 @@ class GoogleCalendarEventsSensor(Entity):
             'name': self._name,
             'events': self._events
         }
-
-
-    

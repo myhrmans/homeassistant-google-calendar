@@ -1,0 +1,36 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+google:
+  client_id: !secret googleid
+  client_secret: !secret googlesecret
+
+sensor:
+- platform: google_calender_events
+  calendar:
+    - id: felicia_careberg
+    - id: timeedit_sgimfh17_internationella_marknadsforing_20190901
+      type: school
+  name: Felicias Kalender
+- platform: google_calender_events
+  calendar:
+    - id: martincarlbengtmyhrman_gmail_com
+  name: Martins Kalender
+- platform: google_calender_events
+  calendar:
+    - id: felli_och_marti
+  name: Familjens Kalender

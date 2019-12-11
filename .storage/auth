@@ -1,0 +1,107 @@
+{
+    "data": {
+        "credentials": [
+            {
+                "auth_provider_id": null,
+                "auth_provider_type": "homeassistant",
+                "data": {
+                    "username": "myhrmans"
+                },
+                "id": "df49c3f6966e4841bc4e6de7b0dde45e",
+                "user_id": "adf21a33788b4511989c365be2ca352f"
+            }
+        ],
+        "groups": [
+            {
+                "id": "system-admin",
+                "name": "Administrators"
+            },
+            {
+                "id": "system-users",
+                "name": "Users"
+            },
+            {
+                "id": "system-read-only",
+                "name": "Read Only"
+            }
+        ],
+        "refresh_tokens": [
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": null,
+                "client_name": null,
+                "created_at": "2019-12-10T13:14:07.359706+00:00",
+                "id": "f1d0339674fa417db26d75063b3fdc53",
+                "jwt_key": "e8c4f591fd3e2945c98a9a8926ff6a3444514adde54cc24dd43b935c79401fdf9da650bbefb43fa0e7769b5b6d4ce43b7e9d50db071e9f64e50036e341914ab4",
+                "last_used_at": null,
+                "last_used_ip": null,
+                "token": "ae5da22bf52c1573e32accdbbd6f8dcb672d6c5af56853c1934bdead59612eb8886bc05227b1e29c9fb071ff6fdb15e6c54451e3d17d78da8844553b6c262bd6",
+                "token_type": "system",
+                "user_id": "90bbe6b470c94cefb692e0b314569e7d"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://localhost:8123/",
+                "client_name": null,
+                "created_at": "2019-12-10T13:16:52.511544+00:00",
+                "id": "e0b7f5ae46df45d3a1032401af106fc2",
+                "jwt_key": "161309ae1a780036f23b417296f045424d12087b77b7a0d477003bbd92c6850249664c3efa21445e175ec6d685ee07a7c7a0eef7a4e487ab7df4c83d4ab05700",
+                "last_used_at": "2019-12-11T12:04:01.845402+00:00",
+                "last_used_ip": "127.0.0.1",
+                "token": "7658f13c2bbd5c4d9c53af7a4ced6ebc99bf89007f04ad5d23701642bb3366d59bbf5bd9d9467d746001c41e0e4b4f38af72796503588fd05f077a830b94ea91",
+                "token_type": "normal",
+                "user_id": "adf21a33788b4511989c365be2ca352f"
+            },
+            {
+                "access_token_expiration": 315360000.0,
+                "client_icon": null,
+                "client_id": null,
+                "client_name": "Google",
+                "created_at": "2019-12-10T13:40:43.532080+00:00",
+                "id": "0f6218623aeb4112827fb2217c57f543",
+                "jwt_key": "b842a1f5057ccad23a51e533211b3e9f8c5d736188455eac0ee7697ac2c3860bfec01c607215b745a58f6e24a4004d4731a5462850cbc4f9e9ec29a226bf638c",
+                "last_used_at": "2019-12-10T13:40:43.532133+00:00",
+                "last_used_ip": null,
+                "token": "be7eaf08de44af43c42d0fe64ac56999ecaaf5b865d3c30774e93933ce1d485355f282031c544ef4ff339c5a61231e0bd409cf42f83064170967f0329651997b",
+                "token_type": "long_lived_access_token",
+                "user_id": "adf21a33788b4511989c365be2ca352f"
+            }
+        ],
+        "users": [
+            {
+                "group_ids": [
+                    "system-admin"
+                ],
+                "id": "6ae25a3931cb4b1f8b2ab9f0c7764ba6",
+                "is_active": true,
+                "is_owner": false,
+                "name": "Home Assistant Cloud",
+                "system_generated": true
+            },
+            {
+                "group_ids": [
+                    "system-admin"
+                ],
+                "id": "90bbe6b470c94cefb692e0b314569e7d",
+                "is_active": true,
+                "is_owner": false,
+                "name": "Hass.io",
+                "system_generated": true
+            },
+            {
+                "group_ids": [
+                    "system-admin"
+                ],
+                "id": "adf21a33788b4511989c365be2ca352f",
+                "is_active": true,
+                "is_owner": true,
+                "name": "Martin Myhrman",
+                "system_generated": false
+            }
+        ]
+    },
+    "key": "auth",
+    "version": 1
+}

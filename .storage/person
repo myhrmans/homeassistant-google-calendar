@@ -1,0 +1,14 @@
+{
+    "data": {
+        "persons": [
+            {
+                "device_trackers": [],
+                "id": "1ec63f30eefe47ebbe1fe5a98b8c34a6",
+                "name": "Martin Myhrman",
+                "user_id": "adf21a33788b4511989c365be2ca352f"
+            }
+        ]
+    },
+    "key": "person",
+    "version": 1
+}

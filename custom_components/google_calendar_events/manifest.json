@@ -1,0 +1,8 @@
+{
+    "domain": "google_calender_events",
+    "name": "Google Calendar Events",
+    "documentation": "",
+    "dependencies": ["google", "calendar", "api", "http","frontend"],
+    "codeowners": ["@xMrVizzy"],
+    "requirements": ["dateparser==0.7.2"]
+}

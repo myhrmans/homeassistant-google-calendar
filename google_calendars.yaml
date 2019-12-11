@@ -1,0 +1,63 @@
+
+- cal_id: martincarlbengtmyhrman@gmail.com
+  entities:
+  - device_id: martincarlbengtmyhrman_gmail_com
+    ignore_availability: true
+    name: martincarlbengtmyhrman@gmail.com
+    track: true
+
+- cal_id: nd95cu9k5395r124md5aalcob5j20ru2@import.calendar.google.com
+  entities:
+  - device_id: timeedit_tgdath16_dataingenjor_halmstad_20171101
+    ignore_availability: true
+    name: "TimeEdit-TGDATh16, Dataingenj\xF6r, Halmstad-20171101"
+    track: true
+
+- cal_id: vpenttk1usj1fsbirstpj00p74@group.calendar.google.com
+  entities:
+  - device_id: felli_och_marti
+    ignore_availability: true
+    name: Felli och Marti
+    track: true
+
+- cal_id: gsmcc11aipgm20ko2aojhqna0o1rl8ru@import.calendar.google.com
+  entities:
+  - device_id: timeedit_sgimfh17_internationella_marknadsforing_20190901
+    ignore_availability: true
+    name: "TimeEdit-SGIMFh17, Internationella marknadsf\xF6ring...-20190901"
+    track: true
+
+- cal_id: feliciacareberg@gmail.com
+  entities:
+  - device_id: felicia_careberg
+    ignore_availability: true
+    name: Felicia Careberg
+    track: true
+
+- cal_id: family06321459821716668997@group.calendar.google.com
+  entities:
+  - device_id: familjefilm
+    ignore_availability: true
+    name: Familjefilm
+    track: true
+
+- cal_id: addressbook#contacts@group.v.calendar.google.com
+  entities:
+  - device_id: contacts
+    ignore_availability: true
+    name: Contacts
+    track: true
+
+- cal_id: sv.swedish#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: helgdagar_i_sverige
+    ignore_availability: true
+    name: Helgdagar i Sverige
+    track: true
+
+- cal_id: e_2_sv#weeknum@group.v.calendar.google.com
+  entities:
+  - device_id: week_numbers
+    ignore_availability: true
+    name: Week Numbers
+    track: true

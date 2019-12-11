@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "last_seen": "2019-12-11T15:00:14.001494+00:00",
+            "state": {
+                "attributes": {
+                    "editable": true,
+                    "friendly_name": "Martin Myhrman",
+                    "id": "1ec63f30eefe47ebbe1fe5a98b8c34a6",
+                    "user_id": "adf21a33788b4511989c365be2ca352f"
+                },
+                "context": {
+                    "id": "03c28b2c391c44ab97bd5ce89e77cfad",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "person.martin_myhrman",
+                "last_changed": "2019-12-11T12:15:00.044337+00:00",
+                "last_updated": "2019-12-11T12:15:05.608611+00:00",
+                "state": "unknown"
+            }
+        }
+    ],
+    "key": "core.restore_state",
+    "version": 1
+}
